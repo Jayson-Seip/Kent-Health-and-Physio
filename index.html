@@ -6,28 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Website</title>
     <link rel="stylesheet" href="styles\styles.css">
-    <link rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class=" header justify-content-space-between">
-        <h1>Kent Health and Physio Clinic</h1>
+    <nav class="navbar navbar-expand-md navbar-design">
+        <div class="container-fluid">
+            <!-- Left hand side of nav-->
+            <ul class="navbar-nav">
+                <li class="nav-logo">
+                    <a class="navbar-brand"> Logo</a>
+                </li>
+                <li>
+                    <span class="website-name">
+                        <h1 style="color: white; font-size: 28px">Kent Street Health and Physio Clinic</h1>
+                    </span>
+                </li>
+            </ul>
 
-        <!-- Navbar-->
-        <nav class="navbar justify-content-right">
-            <a>Home</a>
-            <a>Our Team</a>
-            <a>Service</a>
-            <a>Location</a>
-            <a>Contact Us</a>
-
-        </nav>
-    </div>
-
-    <div class=" Our Service">
-        <h2> Our Services</h2>
-    </div>
-
+            <!-- Links to other sections of the web page-->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Our Team </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Location </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Contact Us </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
 </body>
