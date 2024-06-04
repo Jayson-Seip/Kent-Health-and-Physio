@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-design {
-    background-color: darkturquoise;
+    background-color: teal;
     height: 70px;
     padding: 0;
 }
@@ -14,7 +14,7 @@ body {
 }
 
 .nav-item a {
-    color: white;
+    color: lightblue;
     font-size: 18px;
 }
 
