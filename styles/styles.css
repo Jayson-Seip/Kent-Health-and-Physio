@@ -22,3 +22,7 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+
+.justified-text {
+    text-align: justify;
+}
