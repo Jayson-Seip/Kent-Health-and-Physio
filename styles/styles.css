@@ -26,3 +26,7 @@ body {
 .justified-text {
     text-align: justify;
 }
+
+body {
+    font-family: sans-serif;
+}

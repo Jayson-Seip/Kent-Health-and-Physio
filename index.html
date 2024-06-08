@@ -18,9 +18,6 @@
         <div class="container-fluid">
             <!-- Left hand side of nav-->
             <ul class="navbar-nav">
-                <li class="nav-logo">
-                    <a class="navbar-brand"> Logo</a>
-                </li>
                 <li>
                     <span class="website-name">
                         <h1 style="color: white; font-size: 28px">Kent Street Health and Physio Clinic</h1>
@@ -34,16 +31,16 @@
                     <a class="nav-link" href="#"> Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Our Team </a>
+                    <a class="nav-link" href="#ourTeam"> Our Team </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Service</a>
+                    <a class="nav-link" href="#services">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Location </a>
+                    <a class="nav-link" href="#location"> Location </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Contact Us </a>
+                    <a class="nav-link" href="#location"> Contact Us </a>
                 </li>
             </ul>
         </div>
@@ -105,7 +102,7 @@
     </div>
 
     <!-- Meet the team section of the website-->
-    <div class="container-fluid">
+    <div class="container-fluid" id="ourTeam">
         <h2 class="text-center" style="margin-top: 30px;">Meet Our Team</h2>
     </div>
     <div class="container" style="display: flex; align-items: center;">
@@ -116,7 +113,7 @@
                         style="height:300px">
                     <div class="card-body">
                         <h4 class="card-title">Dr. Emily Thompson MD</h4>
-                        <p class="card-text" style="margin-bottom: 40px;">specialty: Dermatology, Diagnostics </p>
+                        <p class="card-text" style="margin-bottom: 40px;">Specialty: Dermatology, Diagnostics </p>
 
                         <p class="justified-text"> Dr Thompson is a Board
                             Certified-Dermtolgist who obtained her MD from
@@ -175,13 +172,17 @@
             </div>
 
             <div class="col-3">
-                <div class="card" style="max-width: 24rem; height: 650px ">
+                <div class="card" style="max-width: 24rem; height: 700px ">
 
                     <img class="card-img-top" src="images\doctor-white-uniform-office.jpg" alt="Card image"
                         style="height:300px">
                     <div class="card-body">
-                        <h4 class="card-title">Dr. Doe</h4>
-                        <p class="card-text">specialist in...</p>
+                        <h4 class="card-title">William Cooper, PT</h4>
+                        <p class="card-text" style="padding-bottom: 25px">Specialty: Physiotherapy.</p>
+                        <p>Cooper is Board-Certified-physiothearpist obtaining his master degree from the University of
+                            Toronto. Cooper is an Active member of professional organizations such as the Canadian
+                            Physiotherapy
+                            Association (CPA) and the Ontario Physiotherapy Association (OPA).</p>
 
                     </div>
                     <div class="card-footer text-center"> <button type="button" class="btn" data-bs-toggle="modal"
@@ -195,7 +196,7 @@
     </div>
 
     <!-- Service Section -->
-    <div class="container-fluid  bg-light" style="height:950px; background-color:lightgray;">
+    <div class="container-fluid  bg-light" id="services" style="height:950px; background-color:lightgray;">
         <div class="container-fluid text-center" style="margin-top: 30px;">
             <h2>Our Services</h2>
             <p> We offer a varitiy of services</p>
@@ -310,7 +311,7 @@
     </div>
 
     <!-- Location Section -->
-    <div class="container-fluid  py-3">
+    <div class="container-fluid  py-15" id="location" style="padding-top: 30px;">
         <h1 class="text-center"> Where to Find Us</h1>
         <div class="row">
             <div class="col-md-8">
@@ -470,8 +471,14 @@
                 </div>
                 <div class="modal-body" id="confirmationModalBody">
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Book an Appointment</button>
+                </div>
             </div>
+
         </div>
+
     </div>
 
     <!-- Java Script function to display a booking confirmation-->
