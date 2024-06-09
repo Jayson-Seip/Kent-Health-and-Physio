@@ -224,7 +224,7 @@
                     <div>
                         <h4>Dermatolgy Consult</h4>
                         <p>During this consult you will recieved and evlaution of your skin, nails, and hair's health.
-                            Our Specilait Dr. Emily Thompson will address any concerns and provide a tailored treatment
+                            Our specialist Dr. Emily Thompson will address any concerns and provide a tailored treatment
                         </p>
                     </div>
                 </div>
@@ -241,7 +241,7 @@
                     <div>
                         <h4>Ear Cleaning</h4>
                         <p> Book an appointment with our ENT specialist Dr. James Anderson who will provide a deep clean
-                            of all the ear wax buildup </p>
+                            of all the ear wax buildup</p>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex justify-content-end align-items-center">
@@ -466,14 +466,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirmationModalLabel">Booking Confirmation</h5>
+                    <h4 class="modal-title" id="confirmationModalLabel">Booking Confirmation</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" id="confirmationModalBody">
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-                        Book an Appointment</button>
+                        Book another Appointment</button>
                 </div>
             </div>
 
@@ -494,18 +496,23 @@
             var expert = document.getElementById('expert').value;
             var date = document.getElementById('date').value;
             var appointmentTime = document.getElementById('appointmentTime').value;
+            let bookingConfirmNumber = Math.floor(Math.random() * 90000) + 10000
+            var confirmationMessage =
+                '<h5>Your Booking has Been Confirmed</h5>' +
+                '<h6>Booking Confirmation Number is: ' + bookingConfirmNumber + '</h6>' +
+                '<div style="display: flex; justify-content: space-between;">' +
+                '<span>Date: ' + date + '</span>' +
+                '<span>Appointment Time: ' + appointmentTime + '</span>' +
+                '</div>' +
+                '<div style="display: flex; justify-content: space-between;">' +
+                '<span>Service: ' + service + '</span>' +
+                '<span>Expert: ' + expert + '</span>' +
+                '</div>';
 
 
-            var confirmationMessage = 'First Name: ' + firstName + '<br>' +
-                'Last Name: ' + lastName + '<br>' +
-                'Email: ' + email + '<br>' +
-                'Service: ' + service + '<br>' +
-                'Expert: ' + expert + '<br>' +
-                'Date: ' + date + '<br>' +
-                'Appointment Time: ' + appointmentTime;
-
-            // Populate confirmation modal with booking information
             document.getElementById('confirmationModalBody').innerHTML = confirmationMessage;
+            // Populate confirmation modal with booking information
+
 
             // Show confirmation modal
             var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
