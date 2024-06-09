@@ -27,6 +27,6 @@ body {
     text-align: justify;
 }
 
-body {
-    font-family: sans-serif;
+p {
+    font-family: 'Open Sans', sans-serif;
 }
