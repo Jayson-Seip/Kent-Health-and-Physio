@@ -30,3 +30,29 @@ body {
 p {
     font-family: 'Open Sans', sans-serif;
 }
+
+.navbar-collapse.show {
+    background-color: white;
+    /* Set the background color when navbar is expanded */
+    padding: 10px;
+    /* Optional: Adjust padding for better appearance */
+}
+
+.container-fluid img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container-fluid img {
+        height: 300px;
+        /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-fluid img {
+        height: 200px;
+        /* Adjust height for even smaller screens */
+    }
+}

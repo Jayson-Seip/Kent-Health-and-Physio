@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </head>
 
 <body>
@@ -17,39 +19,41 @@
     <!-- ===================== -->
     <nav class="navbar navbar-expand-md navbar-design fixed-top">
         <div class="container-fluid">
-            <!-- Left hand side of nav-->
-            <ul class="navbar-nav">
-                <li>
-                    <span class="website-name">
-                        <h1 style="color: white; font-size: 28px; ">Kent Street Health
-                            and Physio Clinic</h1>
-                    </span>
-                </li>
-            </ul>
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="#" style="color:white">Kent Street Health and Physio Clinic</a>
 
-            <!-- Links to other sections of the web page-->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"> Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#ourTeam"> Our Team </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#location"> Location </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#location"> Contact Us </a>
-                </li>
-            </ul>
+            <!-- Navbar Toggler for Hamburger Menu -->
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="closeNavbar()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ourTeam" onclick="closeNavbar()">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" onclick="closeNavbar()">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location" onclick="closeNavbar()">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" onclick="closeNavbar()">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Landing page image-->
     <div class="container-fluid" style="padding-left: 0; padding-right: 0; margin-top: 70px;">
-        <img src="images\Physiotherapy-2.jpg" alt="Placeholder Image" style="width:100%; height:500px;">
+        <img src="images\Physiotherapy-2.jpg" alt="Placeholder Image">
     </div>
 
     <!-- ===================== -->
@@ -106,116 +110,100 @@
     </div>
 
     <!-- Meet the team section of the website-->
+    <!-- Meet Our Team Section -->
     <div class="container-fluid" id="ourTeam">
         <h1 class="text-center" style="margin-top: 30px;">Meet Our Team</h1>
     </div>
-    <div class="container" style="display: flex; align-items: center;">
+    <div class="container">
         <div class="row">
-            <div class="col-3 ">
-                <div class="card" style="max-width: 24rem;height: 700px">
-                    <img class="card-img-top" src="images\pexels-shkrabaanthony-5215024.jpg" alt="Card image"
-                        style="height:300px">
-                    <div class="card-body">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="images/pexels-shkrabaanthony-5215024.jpg" alt="Card image"
+                        style="height: 300px;">
+                    <div class="card-body flex-grow-1">
                         <h4 class="card-title">Dr. Emily Thompson, MD</h4>
-                        <p class="card-text" style="margin-bottom: 40px;">Specialty: Dermatology, Diagnostics </p>
-
-                        <p> Dr. Thompson is a Board-
-                            Certified-Dermatologist who obtained her MD from
-                            the
-                            University of Toronto. She excels in managing and diagnosing various skin condtions: acne,
-                            ecxema in addtion to general diagonstics. Dr.Thompson is also Fluent in English, French and
-                            German.
-                        <p>
+                        <p class="card-text">Specialty: Dermatology, Diagnostics</p>
+                        <p>Dr. Thompson is a Board-Certified Dermatologist who obtained her MD from the University
+                            of Toronto. She excels in managing and diagnosing various skin conditions: acne, eczema,
+                            in addition to general diagnostics. Dr. Thompson is also fluent in English, French, and
+                            German.</p>
                     </div>
-                    <div class="card-footer text-center"> <button type="button" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">
-                            Book an Appointment</button>
+                    <div class="card-footer text-center mt-auto">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bookingModal">Book
+                            an Appointment</button>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card" style="max-width: 24rem; height: 700px">
-                    <img class="card-img-top" src="images\pexels-cristian-rojas-8460157.jpg" alt="Card image"
-                        style="height:300px">
-                    <div class=" card-body">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="images/pexels-cristian-rojas-8460157.jpg" alt="Card image"
+                        style="height: 300px;">
+                    <div class="card-body flex-grow-1">
                         <h4 class="card-title">Dr. James Anderson, MD</h4>
-                        <p class="card-text">Speciality: Diagnostics, Otolaryngology(ENT)</p>
-                        <p> Dr. Anderson obtained his MD from the University of Ottawa in 2004.
-                            He did his fellowship in
-                            Otolaryngology at the Ottawa Hospital. Dr. Anderson provides services related to the Ears,
-                            Nose
-                            and Throat in addtion to general check ups.
-                        <p>
-
+                        <p class="card-text">Specialty: Diagnostics, Otolaryngology (ENT)</p>
+                        <p>Dr. Anderson obtained his MD from the University of Ottawa in 2004. He did his fellowship
+                            in Otolaryngology at the Ottawa Hospital. Dr. Anderson provides services related to the
+                            ears, nose, and throat in addition to general checkups.</p>
                     </div>
-                    <div class="card-footer text-center"> <button type="button" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">
-                            Book an Appointment</button>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-3 ">
-                <div class="card" style="max-width: 24rem; height: 700px">
-                    <img class="card-img-top" id="image" src="images\PhysioTherapist1.png" alt="Card image"
-                        style="height:300px">
-                    <div class="card-body">
-                        <h4 class="card-title">Sarah Jeffries, PT </h4>
-                        <p class="card-text" style="margin-bottom: 40px;">Speciality: Physiotherapy</p>
-                        <p> Jeffries brings over 15 years of Physiotherapy experence, obtaining
-                            her masters degree in
-                            physiotherapy from the University of Ottawa. Jeffries has completed specialized coursework
-                            in
-                            manual
-                            therapy techniques and therapeutic exercise prescription.</p>
-
-                    </div>
-                    <div class="card-footer text-center"> <button type="button" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">
-                            Book an Appointment</button>
+                    <div class="card-footer text-center mt-auto">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bookingModal">Book
+                            an Appointment</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-3">
-                <div class="card" style="max-width: 24rem; height: 700px ">
-
-                    <img class="card-img-top" src="images\doctor-white-uniform-office.jpg" alt="Card image"
-                        style="height:300px">
-                    <div class="card-body">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" id="image" src="images/PhysioTherapist1.png" alt="Card image"
+                        style="height: 300px;">
+                    <div class="card-body flex-grow-1">
+                        <h4 class="card-title">Sarah Jeffries, PT</h4>
+                        <p class="card-text">Specialty: Physiotherapy</p>
+                        <p>Jeffries brings over 15 years of Physiotherapy experience, obtaining her master's degree
+                            in physiotherapy from the University of Ottawa. Jeffries has completed specialized
+                            coursework in manual therapy techniques and therapeutic exercise prescription.</p>
+                    </div>
+                    <div class="card-footer text-center mt-auto">
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#bookingModal">Book an
+                            Appointment</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="images/doctor-white-uniform-office.jpg" alt="Card image"
+                        style="height: 300px;">
+                    <div class="card-body flex-grow-1">
                         <h4 class="card-title">William Cooper, PT</h4>
-                        <p class="card-text" style="padding-bottom: 25px">Specialty: Physiotherapy.</p>
-                        <p>Cooper is Board-Certified-physiotherapist obtaining his master degree
-                            from the University of
-                            Toronto. Cooper is an active member of professional organizations such as the Canadian
-                            Physiotherapy
-                            Association (CPA) and the Ontario Physiotherapy Association (OPA).</p>
-
+                        <p class="card-text">Specialty: Physiotherapy</p>
+                        <p>Cooper is a Board-Certified physiotherapist obtaining his master's degree from the
+                            University of Toronto. Cooper is an active member of professional organizations such as
+                            the Canadian Physiotherapy Association (CPA) and the Ontario Physiotherapy Association
+                            (OPA).</p>
                     </div>
-                    <div class="card-footer text-center"> <button type="button" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">
-                            Book an Appointment</button>
+                    <div class="card-footer text-center mt-auto">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bookingModal">Book
+                            an Appointment</button>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- Service Section -->
     <div class="container-fluid  bg-light" id="services"
-        style="height:950px; margin-top: 70px; background-color:lightgray; ">
-        <div class="container-fluid text-center" style="margin-top: 30px;">
-            <h1 style="margin-top: 20px;">Our Services</h1>
+        style=" min-height: 1000px; margin-top: 70px; background-color:lightgray; ">
+        <div class="container-fluid text-center pt-3" style="margin-top: 30px;">
+            <h1>Our Services</h1>
         </div>
-        <h2 class="text-center" style="margin-top: 30px;"> Healthcare Services</h2>
+        <h2 class="text-center mt-4"> Healthcare Services</h2>
         <div class="container">
-            <!-- Example of service box-->
+            <!-- Service box-->
             <div class="row border d-flex align-items-center mb-3">
                 <div class="col-md-8">
                     <div>
                         <h3>General Check up</h3>
-                        <p> Our healthcare professional will provide you with a full health assessment and blood work.
+                        <p> Our healthcare professional will provide you with a full health assessment and blood
+                            work.
                             In
                             addition, our expert will answer any medical questions you may have.</p>
                     </div>
@@ -231,7 +219,8 @@
                 <div class="col-sm-8">
                     <div>
                         <h3>Dermatology Consult</h3>
-                        <p>During this consult you will recieved and evalution of your skin, nails, and hair's health.
+                        <p>During this consult you will recieved and evalution of your skin, nails, and hair's
+                            health.
                             Our specialist Dr.Thompson will address any concerns and provide you with a tailored
                             treatment.
                         </p>
@@ -249,7 +238,8 @@
                 <div class="col-sm-8">
                     <div>
                         <h3>Ear Cleaning</h3>
-                        <p> Book an appointment with our ENT specialist Dr. James Anderson who will provide a deep clean
+                        <p> Book an appointment with our ENT specialist Dr. James Anderson who will provide a deep
+                            clean
                             of all the ear wax buildup.</p>
                     </div>
                 </div>
@@ -263,14 +253,15 @@
         </div>
         <!-- Physiotherapy Services-->
         <h2 class="text-center" style="margin-top: 35px;"> Physiotherapy Services</h2>
-        <div class="container">
+        <div class="container py-2">
 
             <!--One of the services offered-->
             <div class="row border d-flex align-items-center mb-3">
                 <div class="col-md-8">
                     <div>
                         <h3>Massage Therapy</h3>
-                        <p>Massage Therapy involves the manpulation of soft tissue to improve rexlaxion, reduce muscle
+                        <p>Massage Therapy involves the manpulation of soft tissue to improve rexlaxion, reduce
+                            muscle
                             tension and elevate pain. Our licensed massage therapist will tailor the service
                             to meet your specific needs. This service typically lasts 45 minutes</p>
                     </div>
@@ -287,7 +278,8 @@
                 <div class="col-sm-8">
                     <div>
                         <h3>Accupuncture</h3>
-                        <p>Accupuncture is a Chineses that involves inserting thin needles into specfic points on the
+                        <p>Accupuncture is a Chineses that involves inserting thin needles into specfic points on
+                            the
                             body. The process typically takes 30 minutes and helps treat Headaches, Stress, and Pain
                             management.</p>
                     </div>
@@ -306,7 +298,8 @@
                         <h3>Functional Rehabilitation</h3>
                         <p> Service is designed to help restore functional ability in your dail daily life following
                             injuries,
-                            surgery or ilness. This service provides an hour long session of exercise to help get you
+                            surgery or ilness. This service provides an hour long session of exercise to help get
+                            you
                             back to your orignal self.</p>
                     </div>
                 </div>
@@ -542,6 +535,16 @@
 
 
     </script>
+    <script>
+        function closeNavbar() {
+            var navBar = document.querySelector('.navbar-collapse');
+            if (navBar.classList.contains('show')) {
+                var toggleButton = document.querySelector('.navbar-toggler');
+                toggleButton.click(); // Simulate a click on the toggler button to close the navbar
+            }
+        }
+    </script>
+
 
 
 
